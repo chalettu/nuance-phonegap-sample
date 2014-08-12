@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="net.ninjaenterprises.nuance" version="0.1.0">
+        <name>Device</name>
+        <description>Cordova Nuance Ndev Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,voice_recognition</keywords>
+        <js-module src="www/nuancespeechkit.js" name="NuancePlugin">
+            <clobbers target="NuancePlugin" />
+        </js-module>
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="NuancePlugin">
+                    <param name="ios-package" value="NuancePlugin"/>
+                    <param name="onload" value="true" />
+                </feature>
+            </config-file>
+            <header-file src="src/ios/NuancePlugin.h" />
+            <source-file src="src/ios/NuancePlugin.m" compiler-flags="-fno-objc-arc" />
+            <header-file src="src/ios/ICredentials.h" />
+            <header-file src="src/ios/Credentials.h" />
+            <source-file src="src/ios/Credentials.m" />
+           
+            <framework src="AssetsLibrary.framework" />
+            <framework src="Security.framework" />
+            <framework src="Foundation.framework" />
+            <framework src="CoreMedia.framework" />
+            <framework src="MediaPlayer.framework" />
+            <framework src="SystemConfiguration.framework" /> 
+            <framework src="CFNetwork.framework" /> 
+            <framework src="AVFoundation.framework" /> 
+            <framework src="AudioToolbox.framework" /> 
+            <framework src="CoreGraphics.framework" /> 
+        </platform>
+         <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="NuancePlugin" >
+                <param name="android-package" value="net.ninjaenterprises.nuance.NuancePlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/ICredentials.java" target-dir="src/net/ninjaenterprises/nuance" />
+        <source-file src="src/android/Credentials.java" target-dir="src/net/ninjaenterprises/nuance" />
+        <source-file src="src/android/NuancePlugin.java" target-dir="src/net/ninjaenterprises/nuance" />
+
+    </platform>
+
+    </plugin>
