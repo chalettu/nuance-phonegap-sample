@@ -1,5 +1,5 @@
 
-var speechKit = NuancePlugin;
+var speechKit = "";
 
 
 function setRecoDialogVisibile(visibility) {
