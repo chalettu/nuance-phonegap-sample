@@ -49,6 +49,8 @@
 		F2691E9AE9D54A16AFF20CEB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AF3316F92149389B398D51 /* Security.framework */; };
 		F71FB8BC1999DCD4005DA600 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71FB8BB1999DCD4005DA600 /* SpeechKit.framework */; };
 		FBE32B9F3D1444A99CBE3449 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6587E808E874B51B566C896 /* CoreMedia.framework */; };
+		65E67C64117F40EEBFDDB627 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE751393A964789BFD8013E /* CDVDevice.m */; };
+		7E2B22A2A4F84108AEF12735 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DCB71C13444EEBEA256B8 /* CDVLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,10 @@
 		F6587E808E874B51B566C896 /* CoreMedia.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F71FB8BB1999DCD4005DA600 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Nuance/config.xml; sourceTree = "<group>"; };
+		0AE751393A964789BFD8013E /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		20B3DF720C1D47BBA94ED25D /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		CB9DCB71C13444EEBEA256B8 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		556D59AE09364FD2AB4BF0BF /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +276,10 @@
 				77D29CD398644CB0B087CBD5 /* NuancePlugin.h */,
 				1C1BDAA5C5BF425681ED08B5 /* ICredentials.h */,
 				A0AE94DCAD1F4BAAB6F81F7E /* Credentials.h */,
+				0AE751393A964789BFD8013E /* CDVDevice.m */,
+				20B3DF720C1D47BBA94ED25D /* CDVDevice.h */,
+				CB9DCB71C13444EEBEA256B8 /* CDVLogger.m */,
+				556D59AE09364FD2AB4BF0BF /* CDVLogger.h */,
 			);
 			name = Plugins;
 			path = Nuance/Plugins;
@@ -466,6 +476,8 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				EEDB7EC108D24A009A96725E /* NuancePlugin.m in Sources */,
 				51327C1133F648608C1B9BE4 /* Credentials.m in Sources */,
+				65E67C64117F40EEBFDDB627 /* CDVDevice.m in Sources */,
+				7E2B22A2A4F84108AEF12735 /* CDVLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

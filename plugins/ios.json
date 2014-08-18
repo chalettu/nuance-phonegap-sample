@@ -5,6 +5,24 @@
     },
     "config_munge": {
         "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NuancePlugin\"><param name=\"ios-package\" value=\"NuancePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
             "framework": {
                 "parents": {
                     "AssetsLibrary.framework": [
@@ -68,21 +86,17 @@
                         }
                     ]
                 }
-            },
-            "config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"NuancePlugin\"><param name=\"ios-package\" value=\"NuancePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
             }
         }
     },
     "installed_plugins": {
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.nuance"
+        },
         "net.ninjaenterprises.nuance": {
+            "PACKAGE_NAME": "com.nuance"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.nuance"
         }
     },

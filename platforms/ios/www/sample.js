@@ -34,8 +34,10 @@ function toggleTTSDialog() {
        
 	
 function doInit() {	   
-    var serverURL = prompt("Please supply your serverURL");
-    speechKit.initialize("com.nuance.speechkit.phonegap.Credentials", serverURL, 443, false, function(r){printResult(r)}, function(e){printResult(e)} );
+    //CHANGE THIS TO WHATEVER SERVER YOU ARE POINTING TO FOR DEV OR PRODUCTION
+    var serverURL = "sandbox.nmdp.nuancemobility.net";
+
+    speechKit.initialize("Credentials", serverURL, 443, false, function(r){printResult(r)}, function(e){printResult(e)} );
 }
 
 function doCleanup(){

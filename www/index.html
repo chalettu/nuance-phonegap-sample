@@ -5,7 +5,6 @@
 	     <title>PhoneGap Speech Demo</title>
 	</head>
 	<body>
-		
 		<link type="text/css" rel="stylesheet" href="sample.css"></link>
 		     
 		<div class="tab-set" id="tab-set">
@@ -33,13 +32,14 @@
 				  </P>
 				  <P>Language:
 				  <SELECT id="reco-language" width="100%" SINGLE>
-					<OPTION selected="selected" value="en_us">US English</OPTION>
+					<OPTION selected="selected" value="eng-USA">US English</OPTION>
 					<OPTION value="es_es">Spanish</OPTION>
 					<OPTION value="fr_fr">French</OPTION>
 					<OPTION value="de_de">German</OPTION>
 				  </SELECT>
 				  </P>
 		          <input id="recognize" onclick="startRecognition()" type="button" value="Start Recognition" style="width: 100%; font-size: 12px; font-face: helvetica; color: #4B714B; font-weight: bold" />
+		          <br><br>
 		          <input id="get-result" onclick="getResult()" type="button" value="Get Last Result" style="width: 100%; font-size: 12px; font-face: helvetica; color: #4B714B; font-weight: bold" />
 		
 				 </div>
@@ -48,7 +48,7 @@
 		          <p>TTS Text:<input id="tts-text" type="text" value="" /></p>
 				  <P>Language:
 				  <SELECT id="tts-language" width="100%" SINGLE>
-					<OPTION selected="selected" value="en_us">US English</OPTION>
+					<OPTION selected="selected" value="eng-USA">US English</OPTION>
 					<OPTION value="es_es">Spanish</OPTION>
 					<OPTION value="fr_fr">French</OPTION>
 					<OPTION value="de_de">German</OPTION>
@@ -89,6 +89,8 @@
           setActiveTab(1);
           
           document.addEventListener('deviceready', function() {
+     		 speechKit = NuancePlugin;
+          	console.log('running init');
         	   //var initButton = document.getElementById("init-speech");
         	   //var cleanUpButton = document.getElementById("cleanup");
         	   doInit();
